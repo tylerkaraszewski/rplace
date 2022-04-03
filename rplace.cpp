@@ -121,6 +121,11 @@ class Place {
     // 2. The user has written to the Place too recently.
     bool update(const Pixel& p);
 
+    // TODO:
+    // void save(); write to a file. Can work in batches appending chunks of updates.
+    // void load(); opposite of serialize. Load from a saved file.
+    // std::vector<const Update> getDiff(size_t fromUpdateNumber); // Returns the difference since a particular update.
+
     // The dimensions are fixed, though you could create a new Place that expands or contracts from a previous Place.
     const uint64_t width = 1000;
     const uint64_t height = 1000;
